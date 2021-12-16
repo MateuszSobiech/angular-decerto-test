@@ -1,0 +1,70 @@
+app-products-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.productsWrapper {
+  overflow-y: hidden;
+  width: 60%;
+  max-height: 500px;
+  transition: max-height 0.5s linear;
+
+  .products {
+    display: flex;
+    justify-content: center;
+    border: #e2e2e2 1px solid;
+    border-radius: 5px;
+    padding: 40px 80px;
+    flex-wrap: wrap;
+  }
+
+  p {
+    margin: 10px;
+  }
+}
+
+.productContainer {
+  position: relative;
+  width: 180px;
+  margin: 10px;
+  padding: 15px 25px;
+  border: #e2e2e2 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fafafa;
+
+  -webkit-box-shadow: 4px 1px 29px -3px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 4px 1px 29px -3px rgba(66, 68, 90, 1);
+  box-shadow: 4px 1px 29px -3px rgba(66, 68, 90, 1);
+
+  -webkit-box-shadow: inset 0px 0px 19px -11px rgba(66, 68, 90, 1);
+  -moz-box-shadow: inset 0px 0px 19px -11px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 0px 19px -11px rgba(66, 68, 90, 1);
+}
+
+.closed {
+  max-height: 0;
+}
+
+.checked {
+  background-color: #00396a;
+  color: white;
+
+  -webkit-box-shadow: inset 0px 0px 21px 4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px 0px 21px 4px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 21px 4px rgba(0, 0, 0, 1);
+
+  ::ng-deep .descriptionIcon {
+    background-color: #fff;
+    color: #787777;
+  }
+}
+
+@media (max-width: 768px) {
+  .productsWrapper {
+    overflow-y: scroll;
+  }
+}

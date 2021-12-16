@@ -1,0 +1,13 @@
+<app-products-bar (toggleEmiter)="getToggle($event)"></app-products-bar>
+<div class="productsWrapper" [ngClass]="{ closed: !isToggle }">
+  <div class="products">
+    <div
+      class="productContainer"
+      *ngFor="let product of products"
+      (click)="setProduct(product)"
+      [ngClass]="{ checked: setCheckedClass(product) }"
+    >
+      <app-product-item [product]="product"> </app-product-item>
+    </div>
+  </div>
+</div>

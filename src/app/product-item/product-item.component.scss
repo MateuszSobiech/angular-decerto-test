@@ -1,0 +1,21 @@
+.descriptionIcon {
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+  background-color: #787777;
+  color: white;
+  padding: 0 7px;
+  border-radius: 45px;
+}
+
+::ng-deep .tooltip-inner {
+  background-color: #a0f1eb;
+  color: black;
+}
+
+::ng-deep .my-custom-class .arrow::before {
+  border-top-color: #a0f1eb;
+}

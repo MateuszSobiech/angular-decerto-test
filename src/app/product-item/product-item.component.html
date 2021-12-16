@@ -1,0 +1,9 @@
+<p>{{ product.name }}</p>
+
+<ng-template #tipContent>{{ product.description }}</ng-template>
+<span
+  class="descriptionIcon"
+  [ngbTooltip]="tipContent"
+  tooltipClass="my-custom-class"
+  >?</span
+>
